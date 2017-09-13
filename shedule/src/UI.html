@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Scheduler Pro</title>
+</head>
+<body style="background-color:#46064c;">
+<div style="color: #FFFFFF; font-size: 30px;">
+Scheduler Pro </div>
+<br>
+<div style="color: #FFFFFF; font-size: 15px">Add an assignment: </div>
+<form action="/MyServlet" method="POST">
+<table style="background-color:#e293dc">
+<tr>
+	<td>User:  <input id="user" type="text" value="" /></td>
+	<td>Assignment:   <input id="assignment" type="text" value="" /></td>
+</tr>
+<tr>
+	<td>Week due: <input name="weekDue" type="radio" id="thisW" value=" "/>
+		<label for="thisW">This Week</label>
+		<input name="weekDue" type="radio" id="nextW" value="\onehalfspacing"/>
+		<label for="nextW">Next Week</label>
+	</td>
+</tr>
+<tr>
+	<td>Day Due:   <select id="dayDue">
+						<option value="Mon">Monday</option>
+						<option value="Tue">Tuesday</option>
+						<option value="Wed">Wednesday</option>
+						<option value="Thu">Thursday</option>
+						<option value="Fri">Friday</option>
+						<option value="Sat">Saturday</option>
+						<option value="Sun">Sunday</option>
+	</select>
+	</td>
+	<td>
+	Time Due:  <input id="timeDue" type="text" value="" />
+	</td>
+</tr>
+<tr><td>
+<input name = "pressed" type="submit" value="Add">
+</td>
+</tr>
+</table>
+</form>
+<br><br>
+<form action = "/MyServlet" method = "POST">
+	<div style="color: #FFFFFF; font-size: 15px">Get schedule for User: <input id="userGen" type="text" value="" />
+	<input name = "pressed" type="submit" value="Generate">
+	</div>
+</form>
+<br><br><br>
+<div style="color: #FFFFFF; font-size: 20px">Schedule:</div>
+<table border= "1" style="background-color:#e293dc">
+<tr><td><span style="display:inline-block; width: 120px;"></span></td>
+<td><span style="display:inline-block; width: 5px;"></span>Mon<span style="display:inline-block; width: 5px;"></span></td>
+<td><span style="display:inline-block; width: 5px;"></span>Tue<span style="display:inline-block; width: 5px;"></span></td>
+<td><span style="display:inline-block; width: 5px;"></span>Wed<span style="display:inline-block; width: 5px;"></span></td>
+<td><span style="display:inline-block; width: 5px;"></span>Thu<span style="display:inline-block; width: 5px;"></span></td>
+<td><span style="display:inline-block; width: 5px;"></span>Fri<span style="display:inline-block; width: 5px;"></span></td>
+<td><span style="display:inline-block; width: 5px;"></span>Sat<span style="display:inline-block; width: 5px;"></span></td>
+<td><span style="display:inline-block; width: 5px;"></span>Sun<span style="display:inline-block; width: 5px;"></span></td>
+<td><span style="display:inline-block; width: 5px;"></span>Mon<span style="display:inline-block; width: 5px;"></span></td>
+<td><span style="display:inline-block; width: 5px;"></span>Tue<span style="display:inline-block; width: 5px;"></span></td>
+<td><span style="display:inline-block; width: 5px;"></span>Wed<span style="display:inline-block; width: 5px;"></span></td>
+<td><span style="display:inline-block; width: 5px;"></span>Thu<span style="display:inline-block; width: 5px;"></span></td>
+<td><span style="display:inline-block; width: 5px;"></span>Fri<span style="display:inline-block; width: 5px;"></span></td>
+<td><span style="display:inline-block; width: 5px;"></span>Sat<span style="display:inline-block; width: 5px;"></span></td>
+<td><span style="display:inline-block; width: 5px;"></span>Sun<span style="display:inline-block; width: 5px;"></span></td>
+</tr>
+</table>
+</body>
+</html>
