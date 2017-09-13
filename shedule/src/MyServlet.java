@@ -43,15 +43,15 @@ public class MyServlet extends HttpServlet {
 				String sqlCode = "INSERT INTO myTable (USERN, ASSIGNM, WHICH, DAY, TIME) VALUES (?, ?, ?, ?, ?)";
 				try {
 					PreparedStatement preparedStatement = connection.prepareStatement(sqlCode);
-					preparedStatement.setString(1, "'" + request.getParameter("user") + "'");
-					preparedStatement.setString(1, "'" + request.getParameter("assignment") + "'");
+					preparedStatement.setString(1, request.getParameter("user"));
+					preparedStatement.setString(2,  request.getParameter("assignment") );
 					if (request.getParameter("weekDue").equals("thisW")) {
-						preparedStatement.setString(1, "0");
+						preparedStatement.setString(3, "0");
 					} else {
-						preparedStatement.setString(1, "1");
+						preparedStatement.setString(3, "1");
 					}
-					preparedStatement.setString(1, "'" + request.getParameter("dayDue") + "'");
-					preparedStatement.setString(1, request.getParameter("timeDue"));
+					preparedStatement.setString(4,  request.getParameter("dayDue"));
+					preparedStatement.setString(5, request.getParameter("timeDue"));
 					preparedStatement.executeQuery();
 				} catch (SQLException e) {
 					// TODO Auto-generated catch block
